@@ -1,0 +1,134 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #444;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#current-date {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+.input-area {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 15px; /* Space between items */
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #eef;
+    border-radius: 5px;
+    align-items: center; /* Vertically align items */
+}
+
+.input-area label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.input-area input[type="time"],
+.input-area input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex-grow: 1; /* Allow text input to grow */
+}
+
+.input-area input[type="text"] {
+    min-width: 200px; /* Ensure text input doesn't get too small */
+}
+
+
+.input-area button {
+    padding: 10px 15px;
+    background-color: #5c67f2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input-area button:hover {
+    background-color: #4a54c4;
+}
+
+#routine-list {
+    list-style: none;
+    padding: 0;
+}
+
+#routine-list li {
+    background: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping inside list items */
+    gap: 10px;
+}
+
+#routine-list li.completed .activity-text {
+    text-decoration: line-through;
+    color: #888;
+}
+
+#routine-list li span {
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+#routine-list li .actions button {
+    padding: 5px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#routine-list li .actions .complete-btn {
+    background-color: #90ee90; /* Light green */
+    border-color: #7ccd7c;
+}
+#routine-list li .actions .complete-btn:hover {
+    background-color: #7ccd7c;
+}
+
+#routine-list li .actions .delete-btn {
+    background-color: #ffcccb; /* Light red */
+    border-color: #f08080;
+}
+#routine-list li .actions .delete-btn:hover {
+    background-color: #f08080;
+}
+
+/* Style for the complete button when item is completed */
+#routine-list li.completed .actions .complete-btn {
+     background-color: #ffa07a; /* Light Salmon for "Mark Incomplete" */
+     border-color: #e9967a;
+}
+#routine-list li.completed .actions .complete-btn:hover {
+     background-color: #e9967a;
+}
